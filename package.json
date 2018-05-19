@@ -1,7 +1,7 @@
 {
   "name": "agediscoverer",
   "version": "1.0.0",
-  "description": "simple es6 project to exercise unit testing",
+  "description": "simple es6 project to exercise tdd",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.index.js"
