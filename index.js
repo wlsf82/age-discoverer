@@ -1,11 +1,11 @@
 class AgeDiscoverer {
     findAgeByBornDate(yearOfBorn) {
-        const todaysYear = new Date().getFullYear();
+        const currentYear = new Date().getFullYear();
 
-        if (isNaN(yearOfBorn) || yearOfBorn > todaysYear) {
+        if (isNaN(yearOfBorn) || yearOfBorn > currentYear) {
             return 0;
         } else {
-            const approximateAge = todaysYear - yearOfBorn;
+            const approximateAge = currentYear - yearOfBorn;
 
             return approximateAge;
         }
