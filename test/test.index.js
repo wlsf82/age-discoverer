@@ -81,7 +81,7 @@ test("returns correct age even when a negative year is provided", t => {
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns zero when providing same year as todays' year", t => {
+test("returns zero when providing same year as current year", t => {
     const ageDiscoverer = new AgeDiscover();
 
     const discoveredAge = ageDiscoverer.findAgeByBornDate(2018);
