@@ -63,6 +63,16 @@ test("returns zero when providing an invalid year", t => {
     const discoveredAge = ageDiscoverer.findAgeByBornDate("foobar");
     const expectedAge = 0;
 
+    t.plan(1);
+
+    t.equal(discoveredAge, expectedAge);
+});
+
+test("returns correct age even when a negative year is provided", t => {
+    const ageDiscoverer = new AgeDiscover();
+
+    const discoveredAge = ageDiscoverer.findAgeByBornDate(-100);
+    const expectedAge = 2118;
 
     t.plan(1);
 
