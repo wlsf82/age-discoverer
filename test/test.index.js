@@ -11,7 +11,7 @@ test("returns my approximate age when I provide the year I born", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, myAge,);
+    t.equal(discoveredAge, myAge);
 });
 
 test("returns my wive's approximate age when I provide her born date", t => {
@@ -23,7 +23,7 @@ test("returns my wive's approximate age when I provide her born date", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, ageOfMyWive,);
+    t.equal(discoveredAge, ageOfMyWive);
 });
 
 test("returns zero when providing a year in the future", t => {
@@ -35,7 +35,7 @@ test("returns zero when providing a year in the future", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, expectedAge,);
+    t.equal(discoveredAge, expectedAge);
 });
 
 test("returns correct age when providing a year as string", t => {
@@ -47,7 +47,7 @@ test("returns correct age when providing a year as string", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, expectedAge,);
+    t.equal(discoveredAge, expectedAge);
 });
 
 test("returns zero when not providing a year", t => {
@@ -59,7 +59,7 @@ test("returns zero when not providing a year", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, expectedAge,);
+    t.equal(discoveredAge, expectedAge);
 });
 
 test("returns zero when providing an invalid year", t => {
@@ -71,5 +71,5 @@ test("returns zero when providing an invalid year", t => {
 
     t.plan(1);
 
-    t.equal(discoveredAge, expectedAge,);
+    t.equal(discoveredAge, expectedAge);
 });
