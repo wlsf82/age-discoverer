@@ -14,6 +14,11 @@ Run `npm test` to run the unit tests.
 If everything is ok you should see a test result like this:
 
 ```
+$ npm test
+
+> agediscoverer@1.0.0 test /Users/Walmyr/ageDiscoverer
+> node test/test.index.js
+
 TAP version 13
 # returns my approximate age when I provide the year I born
 ok 1 should be equal
@@ -27,10 +32,12 @@ ok 4 should be equal
 ok 5 should be equal
 # returns zero when providing an invalid year
 ok 6 should be equal
+# returns correct age even when a negative year is provided
+ok 7 should be equal
 
-1..6
-# tests 6
-# pass  6
+1..7
+# tests 7
+# pass  7
 
 # ok
 ```
