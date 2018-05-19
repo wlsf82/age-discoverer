@@ -34,10 +34,12 @@ ok 5 should be equal
 ok 6 should be equal
 # returns correct age even when a negative year is provided
 ok 7 should be equal
+# returns zero when providing same year as current year
+ok 8 should be equal
 
-1..7
-# tests 7
-# pass  7
+1..8
+# tests 8
+# pass  8
 
 # ok
 ```
