@@ -15,7 +15,7 @@ test("returns my approximate age when I provide the year I born", t => {
     t.equal(discoveredAge, myAge);
 });
 
-test("returns my wive's approximate age when I provide her born date", t => {
+test("returns my wive's approximate age when I provide her year of born", t => {
     const ageDiscoverer = new AgeDiscover();
 
     const discoveredAge = ageDiscoverer.findApproximateAgeByYearOfBorn(1985);
@@ -59,7 +59,7 @@ test("returns zero when not providing a year", t => {
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns zero when providing an invalid year", t => {
+test("returns zero when providing an invalid year (e.g. NaN)", t => {
     const ageDiscoverer = new AgeDiscover();
 
     const discoveredAge = ageDiscoverer.findApproximateAgeByYearOfBorn("foobar");

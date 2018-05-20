@@ -22,7 +22,7 @@ $ npm test
 TAP version 13
 # returns my approximate age when I provide the year I born
 ok 1 should be equal
-# returns my wive's approximate age when I provide her born date
+# returns my wive's approximate age when I provide her year of born
 ok 2 should be equal
 # returns zero when providing a year in the future
 ok 3 should be equal
@@ -30,7 +30,7 @@ ok 3 should be equal
 ok 4 should be equal
 # returns zero when not providing a year
 ok 5 should be equal
-# returns zero when providing an invalid year
+# returns zero when providing an invalid year (e.g. NaN)
 ok 6 should be equal
 # returns correct age even when a negative year is provided
 ok 7 should be equal
