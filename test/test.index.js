@@ -1,5 +1,7 @@
 // These tests were created in the year of 2018.
-// In case you see this code in the future (after 2018), you'll need to update the expected results.
+// In case you see this code in the future (after 2018), you'll need to update the expected results
+// according to the current year.
+
 const test = require("tape");
 
 const AgeDiscover = require("../index");
