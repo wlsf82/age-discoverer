@@ -1,5 +1,5 @@
 class AgeDiscoverer {
-    findAgeByBornDate(yearOfBorn) {
+    findApproximateAgeByYearOfBorn(yearOfBorn) {
         const currentYear = new Date().getFullYear();
         if (isNaN(yearOfBorn) || yearOfBorn > currentYear) {
             return 0;
