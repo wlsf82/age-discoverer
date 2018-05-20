@@ -3,11 +3,11 @@ simple es6 project to exercise tdd
 
 ## Installation
 
-Run `npm test` to install the dev devDependencies
+Run `npm install` to install the dev dependencies
 
 ## Tests
 
-Run `npm test` to run the unit tests.
+Run `npm test` to execute the unit tests.
 
 ### Test results
 
@@ -43,3 +43,6 @@ ok 8 should be equal
 
 # ok
 ```
+___
+
+Made with love by Walmyr Filho
