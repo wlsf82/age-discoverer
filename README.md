@@ -24,22 +24,24 @@ TAP version 13
 ok 1 should be equal
 # returns my wive's approximate age when I provide her year of born
 ok 2 should be equal
-# returns zero when providing a year in the future
+# returns zero when providing one year in the future
 ok 3 should be equal
-# returns correct age when providing a year as string
+# returns zero when providing a hundred years in the future
 ok 4 should be equal
-# returns zero when not providing a year
+# returns correct age when providing year of born as string
 ok 5 should be equal
-# returns zero when providing an invalid year (e.g. NaN)
+# returns zero when not providing a year of born
 ok 6 should be equal
-# returns correct age even when a negative year is provided
+# returns zero when providing an invalid year of born (e.g. NaN)
 ok 7 should be equal
-# returns zero when providing same year as current year
+# returns correct age even when a negative year is provided
 ok 8 should be equal
+# returns zero when providing the same year as the current year
+ok 9 should be equal
 
-1..8
-# tests 8
-# pass  8
+1..9
+# tests 9
+# pass  9
 
 # ok
 ```
