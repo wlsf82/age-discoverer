@@ -44,8 +44,8 @@ test("returns correct age when providing a year as string", t => {
 });
 
 test("returns zero when not providing a year", t => {
-    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn();
     const expectedAge = 0;
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn();
 
     t.plan(1);
 
@@ -53,8 +53,8 @@ test("returns zero when not providing a year", t => {
 });
 
 test("returns zero when providing an invalid year (e.g. NaN)", t => {
-    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn("foobar");
     const expectedAge = 0;
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn("foobar");
 
     t.plan(1);
 
@@ -73,8 +73,8 @@ test("returns correct age even when a negative year is provided", t => {
 
 test("returns zero when providing same year as current year", t => {
     const currentYear = testHelper.getCurrentYear();
-    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(currentYear);
     const expectedAge = 0;
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(currentYear);
 
     t.plan(1);
 
