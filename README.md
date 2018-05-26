@@ -47,4 +47,4 @@ ok 9 should be equal
 ```
 ___
 
-Made with love by Walmyr Filho
+Made with 💚 by Walmyr Filho
