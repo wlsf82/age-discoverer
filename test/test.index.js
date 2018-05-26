@@ -23,10 +23,20 @@ test("returns my wive's approximate age when I provide her year of born", t => {
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns zero when providing a year in the future", t => {
-    const OneYearInTheFuture = testHelper.calculateOneYearInTheFuture();
+test("returns zero when providing one year in the future", t => {
+    const oneYearInTheFuture = testHelper.calculateXYearsInTheFuture(1);
     const expectedAge = 0;
-    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(OneYearInTheFuture);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(oneYearInTheFuture);
+
+    t.plan(1);
+
+    t.equal(discoveredAge, expectedAge);
+});
+
+test("returns zero when providing a hundred years in the future", t => {
+    const hundredYearsInTheFuture = testHelper.calculateXYearsInTheFuture(100);
+    const expectedAge = 0;
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(hundredYearsInTheFuture);
 
     t.plan(1);
 
