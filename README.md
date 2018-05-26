@@ -1,6 +1,14 @@
 # age-discoverer
 simple es6 project to exercise tdd
 
+## Pre-requirements
+
+[NodeJS](https://nodejs.org/) and NPM are required to run this project.
+
+> When installing NodeJS NPM is automatically installed, but it may need to be updated.
+
+> This project was tested with NodeJS version 8.11.2 and NPM version 6.1.0
+
 ## Installation
 
 Run `npm install` to install the dev dependencies
