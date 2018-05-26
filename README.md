@@ -55,4 +55,4 @@ ok 9 should be equal
 ```
 ___
 
-Made with 💚 by Walmyr Filho
+Made with 💚 by [Walmyr Filho](http://walmyr-filho.com)
