@@ -1,12 +1,12 @@
 const test = require("tape");
 
-const findApproximateAgeByYearOfBorn = require("../index");
-const helper = require("./helper");
+const calculateAproximateAgeBasedOnYearOfBorn = require("../index");
+const testHelper = require("./helper");
 
 test("returns my approximate age when I provide the year I born", t => {
     const yearOfBorn = 1982;
-    const expectedAge = helper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
-    const discoveredAge = findApproximateAgeByYearOfBorn(yearOfBorn);
+    const expectedAge = testHelper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
 
@@ -15,8 +15,8 @@ test("returns my approximate age when I provide the year I born", t => {
 
 test("returns my wive's approximate age when I provide her year of born", t => {
     const yearOfBorn = 1985;
-    const expectedAge = helper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
-    const discoveredAge = findApproximateAgeByYearOfBorn(yearOfBorn);
+    const expectedAge = testHelper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
 
@@ -24,9 +24,9 @@ test("returns my wive's approximate age when I provide her year of born", t => {
 });
 
 test("returns zero when providing a year in the future", t => {
-    const OneYearInTheFuture = helper.calculateOneYearInTheFuture();
+    const OneYearInTheFuture = testHelper.calculateOneYearInTheFuture();
     const expectedAge = 0;
-    const discoveredAge = findApproximateAgeByYearOfBorn(OneYearInTheFuture);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(OneYearInTheFuture);
 
     t.plan(1);
 
@@ -35,8 +35,8 @@ test("returns zero when providing a year in the future", t => {
 
 test("returns correct age when providing a year as string", t => {
     const yearOfBorn = "1981";
-    const expectedAge = helper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
-    const discoveredAge = findApproximateAgeByYearOfBorn(yearOfBorn);
+    const expectedAge = testHelper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
 
@@ -44,7 +44,7 @@ test("returns correct age when providing a year as string", t => {
 });
 
 test("returns zero when not providing a year", t => {
-    const discoveredAge = findApproximateAgeByYearOfBorn();
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn();
     const expectedAge = 0;
 
     t.plan(1);
@@ -53,7 +53,7 @@ test("returns zero when not providing a year", t => {
 });
 
 test("returns zero when providing an invalid year (e.g. NaN)", t => {
-    const discoveredAge = findApproximateAgeByYearOfBorn("foobar");
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn("foobar");
     const expectedAge = 0;
 
     t.plan(1);
@@ -63,8 +63,8 @@ test("returns zero when providing an invalid year (e.g. NaN)", t => {
 
 test("returns correct age even when a negative year is provided", t => {
     const yearOfBorn = -100;
-    const expectedAge = helper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
-    const discoveredAge = findApproximateAgeByYearOfBorn(yearOfBorn);
+    const expectedAge = testHelper.calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
 
@@ -72,8 +72,8 @@ test("returns correct age even when a negative year is provided", t => {
 });
 
 test("returns zero when providing same year as current year", t => {
-    const currentYear = helper.getCurrentYear();
-    const discoveredAge = findApproximateAgeByYearOfBorn(currentYear);
+    const currentYear = testHelper.getCurrentYear();
+    const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(currentYear);
     const expectedAge = 0;
 
     t.plan(1);
