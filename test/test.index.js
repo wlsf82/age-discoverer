@@ -9,7 +9,6 @@ test("returns my approximate age when I provide the year I born", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -19,7 +18,6 @@ test("returns my wive's approximate age when I provide her year of born", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -29,7 +27,6 @@ test("returns zero when providing one year in the future", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(oneYearInTheFuture);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -49,7 +46,6 @@ test("returns correct age when providing a year as string", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -58,7 +54,6 @@ test("returns zero when not providing a year", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn();
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -67,7 +62,6 @@ test("returns zero when providing an invalid year (e.g. NaN)", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn("foobar");
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -77,7 +71,6 @@ test("returns correct age even when a negative year is provided", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
 
@@ -87,6 +80,5 @@ test("returns zero when providing same year as current year", t => {
     const discoveredAge = calculateAproximateAgeBasedOnYearOfBorn(currentYear);
 
     t.plan(1);
-
     t.equal(discoveredAge, expectedAge);
 });
