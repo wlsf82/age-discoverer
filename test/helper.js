@@ -1,5 +1,17 @@
-const getCurrentYear = function() { return new Date().getFullYear() };
-const calculateAproximateAgeBasedOnYearOfBorn = function(yearOfBorn) { return getCurrentYear() - yearOfBorn };
-const calculateXYearsInTheFuture = function(numberOfYears) { return getCurrentYear() + numberOfYears };
+const getCurrentYear = function() {
+    return new Date().getFullYear()
+};
 
-module.exports = { getCurrentYear, calculateAproximateAgeBasedOnYearOfBorn, calculateXYearsInTheFuture };
+const calculateAproximateAgeBasedOnYearOfBorn = function(yearOfBorn) {
+    return getCurrentYear() - yearOfBorn
+};
+
+const calculateXYearsInTheFutureBasedOnCurrentYear = function(numberOfYears) {
+    return getCurrentYear() + numberOfYears
+};
+
+module.exports = {
+    getCurrentYear,
+    calculateAproximateAgeBasedOnYearOfBorn,
+    calculateXYearsInTheFutureBasedOnCurrentYear
+};
