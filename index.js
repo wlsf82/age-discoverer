@@ -42,11 +42,10 @@ class AgeDiscoverer {
         const monthOfBorn = birthDate.getMonth();
         const dayOfBorn = birthDate.getDate();
 
-        if (yearOfBorn >= currentYear) return "Congrats! You have just born.";
-            else if (monthOfBorn > currentMonth) return;
-            else if (monthOfBorn < currentMonth) return;
-            else if (dayOfBorn > currentDayOfTheMonth) return;
-            else if (dayOfBorn < currentDayOfTheMonth) return;
+        if (yearOfBorn > currentYear) return;
+            else if (monthOfBorn > currentMonth || monthOfBorn < currentMonth) return;
+            else if (dayOfBorn > currentDayOfTheMonth || dayOfBorn < currentDayOfTheMonth) return;
+            else if (yearOfBorn === currentYear) return "Welcome to earth!";
             else if (dayOfBorn === currentDayOfTheMonth)
                 return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
     }
