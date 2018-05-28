@@ -64,10 +64,14 @@ ok 16 should be equal
 ok 17 should be equal
 # returns zero when not providing a date of birth
 ok 18 should be equal
+# greets on birthday
+ok 19 should be equal
+# greets on bornday
+ok 20 should be equal
 
-1..18
-# tests 18
-# pass  18
+1..20
+# tests 20
+# pass  20
 
 # ok
 ```
