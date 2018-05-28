@@ -10,7 +10,7 @@ const calculateXYearsInTheFutureBasedOnCurrentYear = function(numberOfYears) {
     return getCurrentYear() + numberOfYears
 };
 
-const calculateDateOneDayInTheFuture = function() {
+const calculateDateOfBirthOneDayInTheFuture = function() {
     const currentDate = new Date();
     const dateOneDayInTheFutureInMs = currentDate.setDate(currentDate.getDate() + 1);
     const dateOneDayInTheFutureInDateFormat = new Date(dateOneDayInTheFutureInMs);
@@ -18,9 +18,30 @@ const calculateDateOneDayInTheFuture = function() {
     return dateOneDayInTheFutureInDateFormat;
 }
 
+const calculateDateOfBirthXYearsAgoButNextMonth = function(yearsAgo) {
+    const currentDate = new Date();
+    const dateXYearsAgoInMs = currentDate.setFullYear(currentDate.getFullYear() - yearsAgo);
+    const dateXYearsAgoInDateFormat = new Date(dateXYearsAgoInMs);
+
+    const dateXYearsAgoButNextMonthInMs = dateXYearsAgoInDateFormat.setMonth(dateXYearsAgoInDateFormat.getMonth() + 1);
+    const dateXYearsAgoButNextMonthInDateFormat = new Date(dateXYearsAgoButNextMonthInMs);
+
+    return dateXYearsAgoButNextMonthInDateFormat;
+}
+
+const calculateAgeBasedOnDateOfBirthMinusOne = function(dateOfBirth) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const yearOfBorn = dateOfBirth.getFullYear();
+
+    return currentYear - yearOfBorn - 1;
+}
+
 module.exports = {
     getCurrentYear,
     calculateAproximateAgeBasedOnYearOfBorn,
     calculateXYearsInTheFutureBasedOnCurrentYear,
-    calculateDateOneDayInTheFuture
+    calculateDateOfBirthOneDayInTheFuture,
+    calculateDateOfBirthXYearsAgoButNextMonth,
+    calculateAgeBasedOnDateOfBirthMinusOne
 };
