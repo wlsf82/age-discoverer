@@ -138,7 +138,7 @@ test("returns the exact age based on date of birth - year of born ago current ye
 
 test("returns the exact age based on date of birth - birth day", t => {
     const yearsAgo = 44;
-    const birthDate = testHelper.calculateBirthDayXYearsAgo(yearsAgo);
+    const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
     const expectedResult = `Happy birthday! Today you are completing ${yearsAgo} years old.`;
     const actualResult = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
