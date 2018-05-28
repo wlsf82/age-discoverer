@@ -29,12 +29,15 @@ const calculateDateOfBirthXYearsAgoButNextMonth = function(yearsAgo) {
     return dateXYearsAgoButNextMonthInDateFormat;
 }
 
-const calculateAgeBasedOnDateOfBirthMinusOne = function(dateOfBirth) {
+const calculateDateOfBirthXYearsAgoAndOneMonthAgo = function(yearsAgo) {
     const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const yearOfBorn = dateOfBirth.getFullYear();
+    const dateXYearsAgoInMs = currentDate.setFullYear(currentDate.getFullYear() - yearsAgo);
+    const dateXYearsAgoInDateFormat = new Date(dateXYearsAgoInMs);
 
-    return currentYear - yearOfBorn - 1;
+    const dateXYearsAgoAndOneMonthAgoInMs = dateXYearsAgoInDateFormat.setMonth(dateXYearsAgoInDateFormat.getMonth() - 1);
+    const dateXYearsAgoAndOneMonthAgoInDateFormat = new Date(dateXYearsAgoAndOneMonthAgoInMs);
+
+    return dateXYearsAgoAndOneMonthAgoInDateFormat;
 }
 
 module.exports = {
@@ -43,5 +46,5 @@ module.exports = {
     calculateXYearsInTheFutureBasedOnCurrentYear,
     calculateDateOfBirthOneDayInTheFuture,
     calculateDateOfBirthXYearsAgoButNextMonth,
-    calculateAgeBasedOnDateOfBirthMinusOne
+    calculateDateOfBirthXYearsAgoAndOneMonthAgo,
 };
