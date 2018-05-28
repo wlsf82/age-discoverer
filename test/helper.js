@@ -10,9 +10,9 @@ const calculateXYearsInTheFutureBasedOnCurrentYear = function(numberOfYears) {
     return getCurrentYear() + numberOfYears
 };
 
-const calculateDateOfBirthOneDayInTheFuture = function() {
+const calculateDateOfBirthXDaysInTheFuture = function(daysInTheFuture) {
     const currentDate = new Date();
-    const dateOneDayInTheFutureInMs = currentDate.setDate(currentDate.getDate() + 1);
+    const dateOneDayInTheFutureInMs = currentDate.setDate(currentDate.getDate() + daysInTheFuture);
     const dateOneDayInTheFutureInDateFormat = new Date(dateOneDayInTheFutureInMs);
 
     return dateOneDayInTheFutureInDateFormat;
@@ -66,7 +66,7 @@ module.exports = {
     getCurrentYear,
     calculateAproximateAgeBasedOnYearOfBorn,
     calculateXYearsInTheFutureBasedOnCurrentYear,
-    calculateDateOfBirthOneDayInTheFuture,
+    calculateDateOfBirthXDaysInTheFuture,
     calculateDateOfBirthXYearsAgoButNextMonth,
     calculateDateOfBirthXYearsAgoAndOneMonthAgo,
     calculateDateOfBirthXYearsAgoButNextDay,
