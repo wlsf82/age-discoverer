@@ -68,10 +68,14 @@ ok 18 should be equal
 ok 19 should be equal
 # greets on bornday
 ok 20 should be equal
+# returns undefined when providing bornday X years in the future
+ok 21 should be equal
+# returns undefined when providing bornday X days in the future
+ok 22 should be equal
 
-1..20
-# tests 20
-# pass  20
+1..22
+# tests 22
+# pass  22
 
 # ok
 ```
