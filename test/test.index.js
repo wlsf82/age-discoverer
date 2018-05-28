@@ -186,16 +186,25 @@ test("greets on birthday", t => {
 test("greets on bornday", t => {
     const yearsAgo = 0;
     const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
-    const expectedGreeting = "Congrats! You have just born."
+    const expectedGreeting = "Welcome to earth!"
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
     t.plan(1);
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("greets on bornday - bornday in the future", t => {
+test("returns undefined when providing bornday X years in the future", t => {
     const yearsAhead = 10;
     const birthDate = testHelper.calculateBirthDateXYearsAhead(yearsAhead);
+    let expectedGreeting;
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
+
+test("returns undefined when providing bornday X days in the future", t => {
+    const birthDate = testHelper.calculateDateOfBirthXDaysInTheFuture(1)
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
