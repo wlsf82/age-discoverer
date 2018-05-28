@@ -10,8 +10,7 @@ class AgeDiscoverer {
     }
 
     calculateAgeBasedOnDateOfBirth(birthDate) {
-        if (birthDate == null) return 0;
-        if (!birthDate.getMonth()) return 0;
+        if (birthDate == null || !birthDate.getMonth()) return 0;
 
         const yearOfBorn = birthDate.getFullYear();
         const monthOfBorn = birthDate.getMonth();
