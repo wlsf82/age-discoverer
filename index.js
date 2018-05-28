@@ -20,8 +20,7 @@ class AgeDiscoverer {
             else if (monthOfBorn > currentMonth) return currentYear - yearOfBorn - 1;
             else if (monthOfBorn < currentMonth) return currentYear - yearOfBorn;
             else if (dayOfBorn > currentDayOfTheMonth) return currentYear - yearOfBorn - 1;
-            else if (dayOfBorn < currentDayOfTheMonth) return currentYear - yearOfBorn;
-            else if (dayOfBorn === currentDayOfTheMonth) return currentYear - yearOfBorn;
+            else if (dayOfBorn <= currentDayOfTheMonth) return currentYear - yearOfBorn;
     }
 
     greetsOnBirthdayOrBornday(birthDate) {
