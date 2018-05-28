@@ -88,7 +88,7 @@ test("returns zero when providing the same year as the current year", t => {
 
 // calculateAgeBasedOnDateOfBirth()
 test("returns zero when providing a date of birth one day in the future", t => {
-    const birthDate = testHelper.calculateDateOneDayInTheFuture();
+    const birthDate = testHelper.calculateDateOfBirthOneDayInTheFuture();
     const expectedAge = 0;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
