@@ -139,11 +139,11 @@ test("returns the exact age based on date of birth - year of born past from curr
 test("returns the exact age based on date of birth - birthday", t => {
     const yearsAgo = 44;
     const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
-    const expectedResult = `Happy birthday! Today you are completing ${yearsAgo} years old.`;
-    const actualResult = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
+    const expectedAge = yearsAgo;
+    const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
     t.plan(1);
-    t.equal(actualResult, expectedResult);
+    t.equal(discoveredAge, expectedAge);
 });
 
 test("returns zero when providing an invalid date of birth", t => {
@@ -170,4 +170,25 @@ test("returns zero when not providing a date of birth", t => {
 
     t.plan(1);
     t.equal(discoveredAge, expectedAge);
+});
+
+// greetsOnBirthdayOrBornday
+test("greets on birthday", t => {
+    const yearsAgo = 37;
+    const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
+    const expectedGreeting = `Happy birthday! Today you are completing ${yearsAgo} years old.`
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
+
+test("greets on bornday", t => {
+    const yearsAgo = 0;
+    const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
+    const expectedGreeting = "Congrats! You have just born."
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
 });

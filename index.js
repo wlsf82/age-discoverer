@@ -21,6 +21,21 @@ class AgeDiscoverer {
             else if (monthOfBorn < currentMonth) return currentYear - yearOfBorn;
             else if (dayOfBorn > currentDayOfTheMonth) return currentYear - yearOfBorn - 1;
             else if (dayOfBorn < currentDayOfTheMonth) return currentYear - yearOfBorn;
+            else if (dayOfBorn === currentDayOfTheMonth) return currentYear - yearOfBorn;
+    }
+
+    greetsOnBirthdayOrBornday(birthDate) {
+        if (birthDate == null || !birthDate.getMonth()) return;
+
+        const yearOfBorn = birthDate.getFullYear();
+        const monthOfBorn = birthDate.getMonth();
+        const dayOfBorn = birthDate.getDate();
+
+        if (yearOfBorn >= currentYear) return "Congrats! You have just born.";
+            else if (monthOfBorn > currentMonth) return;
+            else if (monthOfBorn < currentMonth) return;
+            else if (dayOfBorn > currentDayOfTheMonth) return;
+            else if (dayOfBorn < currentDayOfTheMonth) return;
             else if (dayOfBorn === currentDayOfTheMonth)
                 return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
     }
