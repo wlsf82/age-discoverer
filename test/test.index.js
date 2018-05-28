@@ -117,8 +117,9 @@ test("returns the exact age based on date of birth - year of born ago current ye
 });
 
 test("returns the exact age based on date of birth - year of born ago current year, month of born equals the current month and day of born ahead current day", t => {
-    const birthDate = new Date("1982-05-30");
-    const expectedAge = 35;
+    const yearsAgo = 21;
+    const birthDate = testHelper.calculateDateOfBirthXYearsAgoButNextDay(yearsAgo);
+    const expectedAge = yearsAgo - 1;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
     t.plan(1);
@@ -126,8 +127,9 @@ test("returns the exact age based on date of birth - year of born ago current ye
 });
 
 test("returns the exact age based on date of birth - year of born ago current year, month of born equals the current month and day of born ago current day", t => {
-    const birthDate = new Date("1982-05-01");
-    const expectedAge = 36;
+    const yearsAgo = 30;
+    const birthDate = testHelper.calculateDateOfBirthXYearsAgoAndOneDayAgo(yearsAgo);
+    const expectedAge = yearsAgo;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
     t.plan(1);
@@ -135,8 +137,9 @@ test("returns the exact age based on date of birth - year of born ago current ye
 });
 
 test("returns the exact age based on date of birth - birth day", t => {
-    const birthDate = new Date("1982-05-28");
-    const expectedResult = "Happy birthday! Today you are completing 36 years old.";
+    const yearsAgo = 44;
+    const birthDate = testHelper.calculateBirthDayXYearsAgo(yearsAgo);
+    const expectedResult = `Happy birthday! Today you are completing ${yearsAgo} years old.`;
     const actualResult = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
     t.plan(1);
