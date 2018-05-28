@@ -96,7 +96,7 @@ test("returns zero when providing a date of birth one day in the future", t => {
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns the exact age based on date of birth - month of born ahead the current month", t => {
+test("returns the exact age based on date of birth - year of born ago current year and month of born ahead the current month", t => {
     const birthDate = new Date("1982-11-20");
     const expectedAge = 35;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
@@ -105,7 +105,7 @@ test("returns the exact age based on date of birth - month of born ahead the cur
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns the exact age based on date of birth - month of born ago the current month", t => {
+test("returns the exact age based on date of birth - year of born ago current year and month of born ago the current month", t => {
     const birthDate = new Date("1982-04-20");
     const expectedAge = 36;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
@@ -114,7 +114,7 @@ test("returns the exact age based on date of birth - month of born ago the curre
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns the exact age based on date of birth - month of born equals the current month and day of born ahead current day", t => {
+test("returns the exact age based on date of birth - year of born ago current year, month of born equals the current month and day of born ahead current day", t => {
     const birthDate = new Date("1982-05-30");
     const expectedAge = 35;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
@@ -123,7 +123,7 @@ test("returns the exact age based on date of birth - month of born equals the cu
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns the exact age based on date of birth - month of born equals the current month and day of born ago current day", t => {
+test("returns the exact age based on date of birth - year of born ago current year, month of born equals the current month and day of born ago current day", t => {
     const birthDate = new Date("1982-05-01");
     const expectedAge = 36;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
