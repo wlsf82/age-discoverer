@@ -3,10 +3,18 @@ const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth();
 const currentDayOfTheMonth = currentDate.getDate();
 
+const diffBetweenCurrentYearAndYearOfBorn = function(yearOfBorn) {
+    return currentYear - yearOfBorn;
+};
+
+const diffBetweenCurrentYearAndYearOfBornMinusOne = function(yearOfBorn) {
+    return currentYear - yearOfBorn - 1;
+};
+
 class AgeDiscoverer {
     calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn) {
         if (isNaN(yearOfBorn) || yearOfBorn >= currentYear) return 0;
-            else return currentYear - yearOfBorn;
+            else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
     }
 
     calculateAgeBasedOnDateOfBirth(birthDate) {
@@ -17,10 +25,14 @@ class AgeDiscoverer {
         const dayOfBorn = birthDate.getDate();
 
         if (yearOfBorn >= currentYear) return 0;
-            else if (monthOfBorn > currentMonth) return currentYear - yearOfBorn - 1;
-            else if (monthOfBorn < currentMonth) return currentYear - yearOfBorn;
-            else if (dayOfBorn > currentDayOfTheMonth) return currentYear - yearOfBorn - 1;
-            else if (dayOfBorn <= currentDayOfTheMonth) return currentYear - yearOfBorn;
+            else if (monthOfBorn > currentMonth)
+                return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+            else if (monthOfBorn < currentMonth)
+                return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+            else if (dayOfBorn > currentDayOfTheMonth)
+                return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+            else if (dayOfBorn <= currentDayOfTheMonth)
+                return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
     }
 
     greetsOnBirthdayOrBornday(birthDate) {
