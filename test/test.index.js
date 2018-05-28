@@ -192,3 +192,13 @@ test("greets on bornday", t => {
     t.plan(1);
     t.equal(actualGreeting, expectedGreeting);
 });
+
+test("greets on bornday - bornday in the future", t => {
+    const yearsAhead = 10;
+    const birthDate = testHelper.calculateBirthDateXYearsAhead(yearsAhead);
+    let expectedGreeting;
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
