@@ -183,7 +183,7 @@ test("greets on birthday", t => {
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("greets on bornday", t => {
+test("greets on birth date", t => {
     const birthDate = testHelper.calculateBirthDateXYearsAgo(0);
     const expectedGreeting = "Welcome to earth!"
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
@@ -192,7 +192,7 @@ test("greets on bornday", t => {
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("returns undefined when providing bornday X years in the future", t => {
+test("returns undefined when providing birth date X years in the future", t => {
     const birthDate = testHelper.calculateBirthDateXYearsAhead(10);
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
@@ -201,7 +201,7 @@ test("returns undefined when providing bornday X years in the future", t => {
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("returns undefined when providing bornday X days in the future", t => {
+test("returns undefined when providing birth date X days in the future", t => {
     const birthDate = testHelper.calculateDateOfBirthXDaysInTheFuture(1)
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
@@ -210,7 +210,7 @@ test("returns undefined when providing bornday X days in the future", t => {
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("returns undefined when providing bornday X months in the future", t => {
+test("returns undefined when providing birth date X months in the future", t => {
     const birthDate = testHelper.calculateDateOfBirthXMonthsInTheFuture(1)
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
