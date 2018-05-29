@@ -172,6 +172,15 @@ test("returns zero when not providing a date of birth", t => {
     t.equal(discoveredAge, expectedAge);
 });
 
+test("returns zero when providing an invalid date of birth (e.g. `const birthDate = new Date('foobarbaz')`)", t => {
+    const birthDate = new Date("foobarbaz")
+    const expectedAge = 0;
+    const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
+
+    t.plan(1);
+    t.equal(discoveredAge, expectedAge);
+});
+
 // greetsOnBirthdayOrBornday
 test("greets on birthday", t => {
     const yearsAgo = 37;
