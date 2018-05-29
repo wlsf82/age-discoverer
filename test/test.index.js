@@ -227,7 +227,7 @@ test("returns undefined when not providing birth date", t => {
     t.equal(actualGreeting, expectedGreeting);
 });
 
-test("returns undefined when providing invalid birth date (e.g. the string 'foobar' )", t => {
+test("returns undefined when providing invalid birth date (e.g. `const birthDate = new Date('foobar')`)", t => {
     const birthDate = new Date("foobar");
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
