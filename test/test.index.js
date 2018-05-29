@@ -209,3 +209,12 @@ test("returns undefined when providing bornday X days in the future", t => {
     t.plan(1);
     t.equal(actualGreeting, expectedGreeting);
 });
+
+test("returns undefined when providing bornday X months in the future", t => {
+    const birthDate = testHelper.calculateDateOfBirthXMonthsInTheFuture(1)
+    let expectedGreeting;
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
