@@ -218,3 +218,20 @@ test("returns undefined when providing birth date X months in the future", t => 
     t.plan(1);
     t.equal(actualGreeting, expectedGreeting);
 });
+
+test("returns undefined when not providing birth date", t => {
+    let expectedGreeting;
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday();
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
+
+test("returns undefined when providing invalid birth date (e.g. the string 'foobar' )", t => {
+    const birthDate = new Date("foobar");
+    let expectedGreeting;
+    const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
+
+    t.plan(1);
+    t.equal(actualGreeting, expectedGreeting);
+});
