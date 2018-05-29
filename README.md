@@ -66,18 +66,22 @@ ok 17 should be equal
 ok 18 should be equal
 # greets on birthday
 ok 19 should be equal
-# greets on bornday
+# greets on birth date
 ok 20 should be equal
-# returns undefined when providing bornday X years in the future
+# returns undefined when providing birth date X years in the future
 ok 21 should be equal
-# returns undefined when providing bornday X days in the future
+# returns undefined when providing birth date X days in the future
 ok 22 should be equal
-# returns undefined when providing bornday X months in the future
+# returns undefined when providing birth date X months in the future
 ok 23 should be equal
+# returns undefined when not providing birth date
+ok 24 should be equal
+# returns undefined when providing invalid birth date (e.g. the string 'foobar' )
+ok 25 should be equal
 
-1..23
-# tests 23
-# pass  23
+1..25
+# tests 25
+# pass  25
 
 # ok
 ```
