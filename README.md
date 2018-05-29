@@ -1,6 +1,10 @@
 # age-discoverer
 simple es6 project to exercise tdd
 
+## Available methods
+
+This sample project has simple Javascript functions for **calculating the approximate age based on day of birth**, **calculating the age based on the exact birth date** and **cheering on birthday and birth date**.
+
 ## Pre-requirements
 
 [NodeJS](https://nodejs.org/) and NPM are required to run this project.
