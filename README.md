@@ -72,10 +72,12 @@ ok 20 should be equal
 ok 21 should be equal
 # returns undefined when providing bornday X days in the future
 ok 22 should be equal
+# returns undefined when providing bornday X months in the future
+ok 23 should be equal
 
-1..22
-# tests 22
-# pass  22
+1..23
+# tests 23
+# pass  23
 
 # ok
 ```
