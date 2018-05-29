@@ -32,7 +32,15 @@ const calculateBirthDateXYearsAhead = function(yearsAhead) {
     const dateXYearsAheadInDateFormat = new Date(dateXYearsAheadInMs);
 
     return dateXYearsAheadInDateFormat;
-}
+};
+
+const calculateDateOfBirthXMonthsInTheFuture = function(monthsAhead) {
+    const currentDate = new Date();
+    const dateXMonthsAheadInMs = currentDate.setMonth(currentDate.getMonth() + monthsAhead);
+    const dateXMonthsAheadInDateFormat = new Date(dateXMonthsAheadInMs);
+
+    return dateXMonthsAheadInDateFormat;
+};
 
 const calculateDateOfBirthXYearsAgoButNextMonth = function(yearsAgo) {
     const dateXYearsAgoInDateFormat = calculateBirthDateXYearsAgo(yearsAgo);
@@ -80,5 +88,6 @@ module.exports = {
     calculateDateOfBirthXYearsAgoButNextDay,
     calculateDateOfBirthXYearsAgoAndOneDayAgo,
     calculateBirthDateXYearsAgo,
-    calculateBirthDateXYearsAhead
+    calculateBirthDateXYearsAhead,
+    calculateDateOfBirthXMonthsInTheFuture
 };
