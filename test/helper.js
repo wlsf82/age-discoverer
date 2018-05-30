@@ -83,11 +83,11 @@ module.exports = {
     calculateAproximateAgeBasedOnYearOfBorn,
     calculateXYearsInTheFutureBasedOnCurrentYear,
     calculateDateOfBirthXDaysInTheFuture,
+    calculateBirthDateXYearsAgo,
+    calculateBirthDateXYearsAhead,
+    calculateDateOfBirthXMonthsInTheFuture,
     calculateDateOfBirthXYearsAgoButNextMonth,
     calculateDateOfBirthXYearsAgoAndOneMonthAgo,
     calculateDateOfBirthXYearsAgoButNextDay,
     calculateDateOfBirthXYearsAgoAndOneDayAgo,
-    calculateBirthDateXYearsAgo,
-    calculateBirthDateXYearsAhead,
-    calculateDateOfBirthXMonthsInTheFuture
 };
