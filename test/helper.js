@@ -10,10 +10,14 @@ const calculateXYearsInTheFutureBasedOnCurrentYear = function(numberOfYears) {
     return getCurrentYear() + numberOfYears;
 };
 
+const generateNewDateBasedOnDateInMs = function(dateInMs) {
+    return new Date(dateInMs);
+};
+
 const calculateDateOfBirthXDaysInTheFuture = function(daysInTheFuture) {
     const currentDate = new Date();
     const dateOneDayInTheFutureInMs = currentDate.setDate(currentDate.getDate() + daysInTheFuture);
-    const dateOneDayInTheFutureInDateFormat = new Date(dateOneDayInTheFutureInMs);
+    const dateOneDayInTheFutureInDateFormat = generateNewDateBasedOnDateInMs(dateOneDayInTheFutureInMs);
 
     return dateOneDayInTheFutureInDateFormat;
 };
@@ -21,7 +25,7 @@ const calculateDateOfBirthXDaysInTheFuture = function(daysInTheFuture) {
 const calculateBirthDateXYearsAgo = function(yearsAgo) {
     const currentDate = new Date();
     const dateXYearsAgoInMs = currentDate.setFullYear(currentDate.getFullYear() - yearsAgo);
-    const dateXYearsAgoInDateFormat = new Date(dateXYearsAgoInMs);
+    const dateXYearsAgoInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAgoInMs);
 
     return dateXYearsAgoInDateFormat;
 };
@@ -29,7 +33,7 @@ const calculateBirthDateXYearsAgo = function(yearsAgo) {
 const calculateBirthDateXYearsAhead = function(yearsAhead) {
     const currentDate = new Date();
     const dateXYearsAheadInMs = currentDate.setFullYear(currentDate.getFullYear() + yearsAhead);
-    const dateXYearsAheadInDateFormat = new Date(dateXYearsAheadInMs);
+    const dateXYearsAheadInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAheadInMs);
 
     return dateXYearsAheadInDateFormat;
 };
@@ -37,7 +41,7 @@ const calculateBirthDateXYearsAhead = function(yearsAhead) {
 const calculateDateOfBirthXMonthsInTheFuture = function(monthsAhead) {
     const currentDate = new Date();
     const dateXMonthsAheadInMs = currentDate.setMonth(currentDate.getMonth() + monthsAhead);
-    const dateXMonthsAheadInDateFormat = new Date(dateXMonthsAheadInMs);
+    const dateXMonthsAheadInDateFormat = generateNewDateBasedOnDateInMs(dateXMonthsAheadInMs);
 
     return dateXMonthsAheadInDateFormat;
 };
@@ -46,7 +50,7 @@ const calculateDateOfBirthXYearsAgoButNextMonth = function(yearsAgo) {
     const dateXYearsAgoInDateFormat = calculateBirthDateXYearsAgo(yearsAgo);
 
     const dateXYearsAgoButNextMonthInMs = dateXYearsAgoInDateFormat.setMonth(dateXYearsAgoInDateFormat.getMonth() + 1);
-    const dateXYearsAgoButNextMonthInDateFormat = new Date(dateXYearsAgoButNextMonthInMs);
+    const dateXYearsAgoButNextMonthInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAgoButNextMonthInMs);
 
     return dateXYearsAgoButNextMonthInDateFormat;
 };
@@ -55,7 +59,7 @@ const calculateDateOfBirthXYearsAgoAndOneMonthAgo = function(yearsAgo) {
     const dateXYearsAgoInDateFormat = calculateBirthDateXYearsAgo(yearsAgo);
 
     const dateXYearsAgoAndOneMonthAgoInMs = dateXYearsAgoInDateFormat.setMonth(dateXYearsAgoInDateFormat.getMonth() - 1);
-    const dateXYearsAgoAndOneMonthAgoInDateFormat = new Date(dateXYearsAgoAndOneMonthAgoInMs);
+    const dateXYearsAgoAndOneMonthAgoInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAgoAndOneMonthAgoInMs);
 
     return dateXYearsAgoAndOneMonthAgoInDateFormat;
 };
@@ -64,7 +68,7 @@ const calculateDateOfBirthXYearsAgoButNextDay = function(yearsAgo) {
     const dateXYearsAgoInDateFormat = calculateBirthDateXYearsAgo(yearsAgo);
 
     const dateXYearsAgoButNextDayInMs = dateXYearsAgoInDateFormat.setDate(dateXYearsAgoInDateFormat.getDate() + 1);
-    const dateXYearsAgoButOneNextDayInDateFormat = new Date(dateXYearsAgoButNextDayInMs);
+    const dateXYearsAgoButOneNextDayInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAgoButNextDayInMs);
 
     return dateXYearsAgoButOneNextDayInDateFormat;
 };
@@ -73,7 +77,7 @@ const calculateDateOfBirthXYearsAgoAndOneDayAgo = function(yearsAgo) {
     const dateXYearsAgoInDateFormat = calculateBirthDateXYearsAgo(yearsAgo);
 
     const dateXYearsAgoAndOneDayAgoInMs = dateXYearsAgoInDateFormat.setDate(dateXYearsAgoInDateFormat.getDate() - 1);
-    const dateXYearsAgoAndOneDayAgoInDateFormat = new Date(dateXYearsAgoAndOneDayAgoInMs);
+    const dateXYearsAgoAndOneDayAgoInDateFormat = generateNewDateBasedOnDateInMs(dateXYearsAgoAndOneDayAgoInMs);
 
     return dateXYearsAgoAndOneDayAgoInDateFormat;
 };
