@@ -91,6 +91,8 @@ ok 26 should be equal
 
 # ok
 ```
+
+[![Build Status](https://semaphoreci.com/api/v1/wlsf82/age-discoverer/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/age-discoverer)
 ___
 
 Made with 💚 by [Walmyr Filho](http://walmyr-filho.com)
