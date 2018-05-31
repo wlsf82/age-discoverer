@@ -84,6 +84,17 @@ ok 24 should be equal
 ok 25 should be equal
 # returns undefined when providing invalid birth date (e.g. `const birthDate = new Date('foobar')`)
 ok 26 should be equal
+=============================================================================
+Writing coverage object [/Users/Walmyr/www/ageDiscoverer/coverage/coverage.json]
+Writing coverage reports at [/Users/Walmyr/www/ageDiscoverer/coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 92.86% ( 39/42 )
+Branches     : 86.11% ( 31/36 )
+Functions    : 100% ( 5/5 )
+Lines        : 94.12% ( 32/34 )
+================================================================================
 
 1..26
 # tests 26
