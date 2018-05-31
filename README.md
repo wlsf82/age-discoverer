@@ -17,6 +17,12 @@ This sample project has simple Javascript functions for **calculating the approx
 
 Run `npm install` to install the dev dependencies
 
+## Lint
+
+Run `npm run lint` to check for code style issues.
+
+**Note:** in case of lint issues that can be automatically fixed, run `npm run lint:fix` to get them automatically fixed.
+
 ## Tests
 
 Run `npm test` to execute the unit tests.
@@ -102,6 +108,8 @@ Lines        : 100% ( 34/34 )
 
 # ok
 ```
+
+**Note:** after pushes to branch master lint and tests are automatically executed and the build status can be seen below.
 
 [![Build Status](https://semaphoreci.com/api/v1/wlsf82/age-discoverer/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/age-discoverer)
 ___
