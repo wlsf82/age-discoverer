@@ -97,7 +97,7 @@ test("returns zero when providing a date of birth X day(s) in the future", t => 
 });
 
 test("returns the exact age based on date of birth - year of born past from current year and month of born ahead the current month", t => {
-    const yearsAgo = 10;
+    const yearsAgo = 1;
     const birthDate = testHelper.calculateDateOfBirthXYearsAgoButNextMonth(yearsAgo);
     const expectedAge = yearsAgo - 1;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
@@ -107,7 +107,7 @@ test("returns the exact age based on date of birth - year of born past from curr
 });
 
 test("returns the exact age based on date of birth - year of born past from current year and month of born previously from the current month", t => {
-    const yearsAgo = 15;
+    const yearsAgo = 1;
     const birthDate = testHelper.calculateDateOfBirthXYearsAgoAndOneMonthAgo(yearsAgo);
     const expectedAge = yearsAgo;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
