@@ -14,7 +14,7 @@ const diffBetweenCurrentYearAndYearOfBornMinusOne = function(yearOfBorn) {
 class AgeDiscoverer {
     calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn) {
         if (isNaN(yearOfBorn) || yearOfBorn >= currentYear) return 0;
-            else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
     }
 
     calculateAgeBasedOnDateOfBirth(birthDate) {
@@ -25,14 +25,14 @@ class AgeDiscoverer {
         const dayOfBorn = birthDate.getDate();
 
         if (yearOfBorn >= currentYear) return 0;
-            else if (monthOfBorn > currentMonth)
-                return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-            else if (monthOfBorn < currentMonth)
-                return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
-            else if (dayOfBorn > currentDayOfTheMonth)
-                return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-            else if (dayOfBorn <= currentDayOfTheMonth)
-                return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        else if (monthOfBorn > currentMonth)
+            return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+        else if (monthOfBorn < currentMonth)
+            return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        else if (dayOfBorn > currentDayOfTheMonth)
+            return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+        else if (dayOfBorn <= currentDayOfTheMonth)
+            return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
     }
 
     greetsOnBirthdayOrBornday(birthDate) {
@@ -43,11 +43,11 @@ class AgeDiscoverer {
         const dayOfBorn = birthDate.getDate();
 
         if (yearOfBorn > currentYear) return;
-            else if (monthOfBorn > currentMonth || monthOfBorn < currentMonth) return;
-            else if (dayOfBorn > currentDayOfTheMonth || dayOfBorn < currentDayOfTheMonth) return;
-            else if (yearOfBorn === currentYear) return "Welcome to earth!";
-            else if (dayOfBorn === currentDayOfTheMonth)
-                return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
+        else if (monthOfBorn > currentMonth || monthOfBorn < currentMonth) return;
+        else if (dayOfBorn > currentDayOfTheMonth || dayOfBorn < currentDayOfTheMonth) return;
+        else if (yearOfBorn === currentYear) return "Welcome to earth!";
+        else if (dayOfBorn === currentDayOfTheMonth)
+            return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
     }
 }
 
