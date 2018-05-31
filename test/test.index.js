@@ -173,7 +173,7 @@ test("returns zero when not providing a date of birth", t => {
 });
 
 test("returns zero when providing an invalid date of birth (e.g. `const birthDate = new Date('foobarbaz')`)", t => {
-    const birthDate = new Date("foobarbaz")
+    const birthDate = new Date("foobarbaz");
     const expectedAge = 0;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
@@ -185,7 +185,7 @@ test("returns zero when providing an invalid date of birth (e.g. `const birthDat
 test("greets on birthday", t => {
     const yearsAgo = 37;
     const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
-    const expectedGreeting = `Happy birthday! Today you are completing ${yearsAgo} years old.`
+    const expectedGreeting = `Happy birthday! Today you are completing ${yearsAgo} years old.`;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
     t.plan(1);
@@ -194,7 +194,7 @@ test("greets on birthday", t => {
 
 test("greets on birth date", t => {
     const birthDate = testHelper.calculateBirthDateXYearsAgo(0);
-    const expectedGreeting = "Welcome to earth!"
+    const expectedGreeting = "Welcome to earth!";
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
     t.plan(1);
@@ -211,7 +211,7 @@ test("returns undefined when providing birth date X years in the future", t => {
 });
 
 test("returns undefined when providing birth date X days in the future", t => {
-    const birthDate = testHelper.calculateDateOfBirthXDaysInTheFuture(1)
+    const birthDate = testHelper.calculateDateOfBirthXDaysInTheFuture(1);
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
@@ -220,7 +220,7 @@ test("returns undefined when providing birth date X days in the future", t => {
 });
 
 test("returns undefined when providing birth date X months in the future", t => {
-    const birthDate = testHelper.calculateDateOfBirthXMonthsInTheFuture(1)
+    const birthDate = testHelper.calculateDateOfBirthXMonthsInTheFuture(1);
     let expectedGreeting;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBornday(birthDate);
 
