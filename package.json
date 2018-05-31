@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "istanbul cover test/test.index.js",
-    "lint": "eslint test/**/*.js",
-    "lint:fix": "eslint test/**/*.js --fix"
+    "lint": "eslint *.js && eslint test/**/*.js",
+    "lint:fix": "eslint *.js --fix && eslint test/**/*.js --fix"
   },
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "MIT",
