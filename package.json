@@ -4,11 +4,12 @@
   "description": "simple es6 project to exercise tdd",
   "main": "index.js",
   "scripts": {
-    "test": "node test/test.index.js"
+    "test": "istanbul cover test/test.index.js"
   },
   "author": "Walmyr Filho <wlsf82@gmail.com> (http://walmyr-filho.com)",
   "license": "MIT",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "tape": "^4.9.0"
   },
   "repository": {
