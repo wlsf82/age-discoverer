@@ -28,8 +28,8 @@ If everything is ok you should see a test result like this:
 ```
 $ npm test
 
-> agediscoverer@1.0.0 test /Users/Walmyr/ageDiscoverer
-> node test/test.index.js
+> agediscoverer@1.0.0 test /Users/Walmyr/www/ageDiscoverer
+> istanbul cover test/test.index.js
 
 TAP version 13
 # returns my approximate age when I provide the year I born
@@ -90,10 +90,10 @@ Writing coverage reports at [/Users/Walmyr/www/ageDiscoverer/coverage]
 =============================================================================
 
 =============================== Coverage summary ===============================
-Statements   : 92.86% ( 39/42 )
-Branches     : 86.11% ( 31/36 )
+Statements   : 100% ( 42/42 )
+Branches     : 94.44% ( 34/36 )
 Functions    : 100% ( 5/5 )
-Lines        : 94.12% ( 32/34 )
+Lines        : 100% ( 34/34 )
 ================================================================================
 
 1..26
