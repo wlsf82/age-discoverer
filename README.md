@@ -27,6 +27,8 @@ Run `npm run lint` to check for code style issues.
 
 Run `npm test` to execute the unit tests.
 
+> Code coverage is executed together with unit tests.
+
 ### Test results
 
 If everything is ok you should see a test result like this:
