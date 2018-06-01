@@ -46,8 +46,7 @@ class AgeDiscoverer {
         else if (monthOfBorn > currentMonth || monthOfBorn < currentMonth) return;
         else if (dayOfBorn > currentDayOfTheMonth || dayOfBorn < currentDayOfTheMonth) return;
         else if (yearOfBorn === currentYear) return "Welcome to earth!";
-        else if (dayOfBorn === currentDayOfTheMonth)
-            return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
+        else return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
     }
 }
 
