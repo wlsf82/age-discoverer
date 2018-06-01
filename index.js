@@ -25,14 +25,10 @@ class AgeDiscoverer {
         const dayOfBorn = birthDate.getDate();
 
         if (yearOfBorn >= currentYear) return 0;
-        else if (monthOfBorn > currentMonth)
-            return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-        else if (monthOfBorn < currentMonth)
-            return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
-        else if (dayOfBorn > currentDayOfTheMonth)
-            return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-        else if (dayOfBorn <= currentDayOfTheMonth)
-            return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        else if (monthOfBorn > currentMonth) return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+        else if (monthOfBorn < currentMonth) return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        else if (dayOfBorn > currentDayOfTheMonth) return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
+        else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
     }
 
     greetsOnBirthdayOrBornday(birthDate) {
