@@ -111,7 +111,7 @@ Lines        : 100% ( 29/29 )
 # ok
 ```
 
-**Note:** after pushes to branch master lint and tests are automatically executed and the build status can be seen below.
+**Note:** after pushes to the master branch, lint and tests are automatically executed and the build status can be seen below.
 
 [![Build Status](https://semaphoreci.com/api/v1/wlsf82/age-discoverer/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/age-discoverer)
 ___
