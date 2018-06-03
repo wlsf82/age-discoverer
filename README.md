@@ -114,6 +114,10 @@ Lines        : 100% ( 29/29 )
 **Note:** after pushes to the master branch, lint and tests are automatically executed and the build status can be seen below.
 
 [![Build Status](https://semaphoreci.com/api/v1/wlsf82/age-discoverer/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/age-discoverer)
+
+#### Disclaimer
+
+If tests are executed in the last day of any month (e.g., 2018-06-30) or in the last month of the year (e.g., 2018-12-20), all tests will still pass, but code coverage will not be 100%. This happens due to test helpers that calculate test dates to not depend on hardcoded values, but for example, if a test is executed in December and it needs to test the path of a date one year ago but next month, instead of testing a date in the previous year, the test would be going through the path of the current year, because when summing one month to December we go to January of next year.
 ___
 
 Made with 💚 by [Walmyr Filho](http://walmyr-filho.com)
