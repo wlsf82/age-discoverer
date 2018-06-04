@@ -118,6 +118,8 @@ Lines        : 100% ( 29/29 )
 #### Disclaimer
 
 If tests are executed in the last day of any month (e.g., 2018-06-30) or in the last month of the year (e.g., 2018-12-20), all tests will still pass, but code coverage will not be 100%. This happens due to test helpers that calculate test dates to not depend on hardcoded values, but for example, if a test is executed in December and it needs to test the path of a date one year ago but next month, instead of testing a date in the previous year, the test would be going through the path of the current year, because when summing one month to December we go to January of next year.
+
+Also, if tests are executed on the first day of the year, four of them will fail, and if tests are executed on the first day of February, two tests will fail. In these cases, code coverage won't be 100%, but these are known issues and will be fixed soon.
 ___
 
 Made with 💚 by [Walmyr Filho](http://walmyr-filho.com)
