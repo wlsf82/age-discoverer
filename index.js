@@ -11,6 +11,10 @@ const diffBetweenCurrentYearAndYearOfBornMinusOne = function(yearOfBorn) {
     return currentYear - yearOfBorn - 1;
 };
 
+const isDateInvalid = function(date) {
+    if (date == null || isNaN(date.getTime())) return true;
+};
+
 class AgeDiscoverer {
     calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn) {
         if (isNaN(yearOfBorn) || yearOfBorn >= currentYear) return 0;
@@ -18,7 +22,7 @@ class AgeDiscoverer {
     }
 
     calculateAgeBasedOnDateOfBirth(birthDate) {
-        if (birthDate == null || !birthDate.getMonth()) return 0;
+        if (isDateInvalid(birthDate)) return 0;
 
         const yearOfBorn = birthDate.getFullYear();
         const monthOfBorn = birthDate.getMonth();
@@ -32,7 +36,7 @@ class AgeDiscoverer {
     }
 
     greetsOnBirthdayOrBornday(birthDate) {
-        if (birthDate == null || !birthDate.getMonth()) return;
+        if (isDateInvalid(birthDate)) return;
 
         const yearOfBorn = birthDate.getFullYear();
         const monthOfBorn = birthDate.getMonth();
