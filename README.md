@@ -3,7 +3,7 @@ simple es6 project to exercise tdd
 
 ## Available methods
 
-This sample project has simple Javascript functions for **calculating the approximate age based on day of birth**, **calculating the age based on the exact birth date** and **cheering on birthday and birth date**.
+This sample project has simple Javascript functions for **calculating the approximate age based on the year of birth**, **calculating the exact age based on the birth date** and **cheering on birthday and exact birth date**.
 
 ## Pre-requirements
 
