@@ -9,7 +9,7 @@ This sample project has simple Javascript functions for **calculating the approx
 
 [NodeJS](https://nodejs.org/) and NPM are required to run this project.
 
-> When installing NodeJS NPM is automatically installed, but it may need to be updated.
+> When installing NodeJS NPM is automatically installed.
 
 > This project was tested with NodeJS version 8.11.2 and NPM version 6.1.0
 
