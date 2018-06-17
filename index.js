@@ -3,12 +3,12 @@ const currentYear = currentDate.getFullYear();
 const currentMonth = currentDate.getMonth();
 const currentDayOfTheMonth = currentDate.getDate();
 
-const diffBetweenCurrentYearAndYearOfBorn = function(yearOfBorn) {
-    return currentYear - yearOfBorn;
+const diffBetweenCurrentYearAndYearOfBirth = function(yearOfBirth) {
+    return currentYear - yearOfBirth;
 };
 
-const diffBetweenCurrentYearAndYearOfBornMinusOne = function(yearOfBorn) {
-    return currentYear - yearOfBorn - 1;
+const diffBetweenCurrentYearAndYearOfBirthMinusOne = function(yearOfBirth) {
+    return currentYear - yearOfBirth - 1;
 };
 
 const isDateInvalid = function(date) {
@@ -16,37 +16,37 @@ const isDateInvalid = function(date) {
 };
 
 class AgeDiscoverer {
-    calculateAproximateAgeBasedOnYearOfBorn(yearOfBorn) {
-        if (isNaN(yearOfBorn) || yearOfBorn >= currentYear) return 0;
-        else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+    calculateAproximateAgeBasedOnYearOfBirth(yearOfBirth) {
+        if (isNaN(yearOfBirth) || yearOfBirth >= currentYear) return 0;
+        else return diffBetweenCurrentYearAndYearOfBirth(yearOfBirth);
     }
 
     calculateAgeBasedOnDateOfBirth(birthDate) {
         if (isDateInvalid(birthDate)) return 0;
 
-        const yearOfBorn = birthDate.getFullYear();
-        const monthOfBorn = birthDate.getMonth();
-        const dayOfBorn = birthDate.getDate();
+        const yearOfBirth = birthDate.getFullYear();
+        const monthOfBirth = birthDate.getMonth();
+        const dayOfBirth = birthDate.getDate();
 
-        if (yearOfBorn >= currentYear) return 0;
-        else if (monthOfBorn > currentMonth) return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-        else if (monthOfBorn < currentMonth) return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
-        else if (dayOfBorn > currentDayOfTheMonth) return diffBetweenCurrentYearAndYearOfBornMinusOne(yearOfBorn);
-        else return diffBetweenCurrentYearAndYearOfBorn(yearOfBorn);
+        if (yearOfBirth >= currentYear) return 0;
+        else if (monthOfBirth > currentMonth) return diffBetweenCurrentYearAndYearOfBirthMinusOne(yearOfBirth);
+        else if (monthOfBirth < currentMonth) return diffBetweenCurrentYearAndYearOfBirth(yearOfBirth);
+        else if (dayOfBirth > currentDayOfTheMonth) return diffBetweenCurrentYearAndYearOfBirthMinusOne(yearOfBirth);
+        else return diffBetweenCurrentYearAndYearOfBirth(yearOfBirth);
     }
 
-    greetsOnBirthdayOrBornday(birthDate) {
+    greetsOnBirthdayOrBirthday(birthDate) {
         if (isDateInvalid(birthDate)) return;
 
-        const yearOfBorn = birthDate.getFullYear();
-        const monthOfBorn = birthDate.getMonth();
-        const dayOfBorn = birthDate.getDate();
+        const yearOfBirth = birthDate.getFullYear();
+        const monthOfBirth = birthDate.getMonth();
+        const dayOfBirth = birthDate.getDate();
 
-        if (yearOfBorn > currentYear) return;
-        else if (monthOfBorn > currentMonth || monthOfBorn < currentMonth) return;
-        else if (dayOfBorn > currentDayOfTheMonth || dayOfBorn < currentDayOfTheMonth) return;
-        else if (yearOfBorn === currentYear) return "Welcome to earth!";
-        else return `Happy birthday! Today you are completing ${currentYear - yearOfBorn} years old.`;
+        if (yearOfBirth > currentYear) return;
+        else if (monthOfBirth > currentMonth || monthOfBirth < currentMonth) return;
+        else if (dayOfBirth > currentDayOfTheMonth || dayOfBirth < currentDayOfTheMonth) return;
+        else if (yearOfBirth === currentYear) return "Welcome to earth!";
+        else return `Happy birthday! Today you are completing ${currentYear - yearOfBirth} years old.`;
     }
 }
 

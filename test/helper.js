@@ -2,8 +2,8 @@ const getCurrentYear = function() {
     return new Date().getFullYear();
 };
 
-const calculateAproximateAgeBasedOnYearOfBorn = function(yearOfBorn) {
-    return getCurrentYear() - yearOfBorn;
+const calculateAproximateAgeBasedOnYearOfBirth = function(yearOfBirth) {
+    return getCurrentYear() - yearOfBirth;
 };
 
 const calculateXYearsInTheFutureBasedOnCurrentYear = function(numberOfYears) {
@@ -84,7 +84,7 @@ const calculateDateOfBirthXYearsAgoAndOneDayAgo = function(yearsAgo) {
 
 module.exports = {
     getCurrentYear,
-    calculateAproximateAgeBasedOnYearOfBorn,
+    calculateAproximateAgeBasedOnYearOfBirth,
     calculateXYearsInTheFutureBasedOnCurrentYear,
     calculateDateOfBirthXDaysInTheFuture,
     calculateBirthDateXYearsAgo,

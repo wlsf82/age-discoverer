@@ -40,19 +40,19 @@ $ npm test
 > istanbul cover test/test.index.js
 
 TAP version 13
-# returns my approximate age when I provide the year I born
+# returns my approximate age when I provide my year of birth
 ok 1 should be equal
-# returns my wive's approximate age when I provide her year of born
+# returns my wive's approximate age when I provide her year of birth
 ok 2 should be equal
 # returns zero when providing one year in the future
 ok 3 should be equal
 # returns zero when providing a hundred years in the future
 ok 4 should be equal
-# returns correct age when providing year of born as string
+# returns correct age when providing year of birth as string
 ok 5 should be equal
-# returns zero when not providing a year of born
+# returns zero when not providing a year of birth
 ok 6 should be equal
-# returns zero when providing an invalid year of born (e.g. NaN)
+# returns zero when providing an invalid year of birth (e.g. NaN)
 ok 7 should be equal
 # returns correct age even when a negative year is provided
 ok 8 should be equal
@@ -60,13 +60,13 @@ ok 8 should be equal
 ok 9 should be equal
 # returns zero when providing a date of birth X day(s) in the future
 ok 10 should be equal
-# returns the exact age based on date of birth - year of born past from current year and month of born ahead the current month
+# returns the exact age based on date of birth - year of birth past from current year and month of birth ahead of current month
 ok 11 should be equal
-# returns the exact age based on date of birth - year of born past from current year and month of born previously from the current month
+# returns the exact age based on date of birth - year of birth past from current year and month of birth previously from the current month
 ok 12 should be equal
-# returns the exact age based on date of birth - year of born past from current year, month of born equals to the current month and day of born ahead from current day
+# returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth ahead of current day
 ok 13 should be equal
-# returns the exact age based on date of birth - year of born past from current year, month of born equals to the current month and day of born previously from the current day
+# returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth previously from the current day
 ok 14 should be equal
 # returns the exact age based on date of birth - birthday
 ok 15 should be equal
@@ -98,10 +98,10 @@ Writing coverage reports at [/Users/Walmyr/www/ageDiscoverer/coverage]
 =============================================================================
 
 =============================== Coverage summary ===============================
-Statements   : 100% ( 40/40 )
+Statements   : 100% ( 43/43 )
 Branches     : 100% ( 32/32 )
-Functions    : 100% ( 5/5 )
-Lines        : 100% ( 29/29 )
+Functions    : 100% ( 6/6 )
+Lines        : 100% ( 31/31 )
 ================================================================================
 
 1..26
