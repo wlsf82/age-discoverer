@@ -35,7 +35,7 @@ class AgeDiscoverer {
         else return diffBetweenCurrentYearAndYearOfBirth(yearOfBirth);
     }
 
-    greetsOnBirthdayOrBirthday(birthDate) {
+    greetsOnBirthdayOrBirthdate(birthDate) {
         if (isDateInvalid(birthDate)) return;
 
         const yearOfBirth = birthDate.getFullYear();
