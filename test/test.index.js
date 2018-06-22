@@ -185,7 +185,7 @@ test("returns zero when providing an invalid date of birth (e.g. `const birthDat
 test("greets on birthday", t => {
     const yearsAgo = 37;
     const birthDate = testHelper.calculateBirthDateXYearsAgo(yearsAgo);
-    const expectedGreeting = `Happy birthday! Today you are completing ${yearsAgo} years old.`;
+    const expectedGreeting = `Happy birthday! Today you are completing ${yearsAgo} years old. 💚 `;
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBirthdate(birthDate);
 
     t.plan(1);
@@ -194,7 +194,7 @@ test("greets on birthday", t => {
 
 test("greets on birth date", t => {
     const birthDate = testHelper.calculateBirthDateXYearsAgo(0);
-    const expectedGreeting = "Welcome to earth!";
+    const expectedGreeting = "Welcome to earth! 💚 ";
     const actualGreeting = ageDiscoverer.greetsOnBirthdayOrBirthdate(birthDate);
 
     t.plan(1);
