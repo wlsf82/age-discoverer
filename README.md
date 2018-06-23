@@ -118,6 +118,16 @@ Lines        : 100% ( 31/31 )
 #### Disclaimer
 
 If tests are executed in any day of January (e.g., 2018-01-16), in the last day of any month (e.g., 2018-06-30) or in the last month of the year (e.g., 2018-12-20), all tests will still pass, but code coverage will not be 100%. This happens due to test helpers that calculate test dates to not depend on hardcoded values, but for example, if a test is executed in December and it needs to test the path of a date one year ago but next month, instead of testing a date in the previous year, the test would be going through the path of the current year, because when summing one month to December we go to January of next year.
+
+## Code quality
+
+Below you can see the status of this project on Sonar Cloud.
+
+![Project Status](https://sonarcloud.io/api/project_badges/measure?project=age-discoverer&metric=alert_status)
+
+> SonarCloud evaluates code in terms of bugs, vulnerabilities, code smells, test coverage, and duplications.
+
+The complete dashboard can be seen [here](https://sonarcloud.io/dashboard?id=age-discoverer).
 ___
 
 Made with 💚 by [Walmyr Filho](http://walmyr-filho.com)
