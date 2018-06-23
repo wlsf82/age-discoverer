@@ -126,7 +126,8 @@ test("returns the exact age based on date of birth - year of birth past from cur
     t.equal(discoveredAge, expectedAge);
 });
 
-test("returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth previously from the current day", t => {
+test(`returns the exact age based on date of birth - year of birth past from current year,
+    month of birth equals to the current month and day of birth previously from the current day`, t => {
     const yearsAgo = 30;
     const birthDate = testHelper.calculateDateOfBirthXYearsAgoAndOneDayAgo(yearsAgo);
     const expectedAge = yearsAgo;
@@ -167,15 +168,6 @@ test("returns zero when providing the the date of birth as the current date", t 
 test("returns zero when not providing a date of birth", t => {
     const expectedAge = 0;
     const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth();
-
-    t.plan(1);
-    t.equal(discoveredAge, expectedAge);
-});
-
-test("returns zero when providing an invalid date of birth (e.g. `const birthDate = new Date('foobarbaz')`)", t => {
-    const birthDate = new Date("foobarbaz");
-    const expectedAge = 0;
-    const discoveredAge = ageDiscoverer.calculateAgeBasedOnDateOfBirth(birthDate);
 
     t.plan(1);
     t.equal(discoveredAge, expectedAge);

@@ -12,7 +12,7 @@ const diffBetweenCurrentYearAndYearOfBirthMinusOne = function(yearOfBirth) {
 };
 
 const isDateInvalid = function(date) {
-    if (date == null || isNaN(date.getTime())) return true;
+    return date == null || isNaN(date.getTime());
 };
 
 class AgeDiscoverer {
@@ -36,15 +36,15 @@ class AgeDiscoverer {
     }
 
     greetsOnBirthdayOrBirthdate(birthDate) {
-        if (isDateInvalid(birthDate)) return;
+        if (isDateInvalid(birthDate)) return undefined;
 
         const yearOfBirth = birthDate.getFullYear();
         const monthOfBirth = birthDate.getMonth();
         const dayOfBirth = birthDate.getDate();
 
-        if (yearOfBirth > currentYear) return;
-        else if (monthOfBirth > currentMonth || monthOfBirth < currentMonth) return;
-        else if (dayOfBirth > currentDayOfTheMonth || dayOfBirth < currentDayOfTheMonth) return;
+        if (yearOfBirth > currentYear) return undefined;
+        else if (monthOfBirth > currentMonth || monthOfBirth < currentMonth) return undefined;
+        else if (dayOfBirth > currentDayOfTheMonth || dayOfBirth < currentDayOfTheMonth) return undefined;
         else if (yearOfBirth === currentYear) return "Welcome to earth! 💚 ";
         else return `Happy birthday! Today you are completing ${currentYear - yearOfBirth} years old. 💚 `;
     }
