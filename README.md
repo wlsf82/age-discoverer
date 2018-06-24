@@ -1,9 +1,9 @@
 # age-discoverer
-simple es6 project to exercise tdd
+simple ES6 project to exercise TDD, refactoring, clean code, code coverage, and more.
 
 ## Available methods
 
-This sample project has simple Javascript functions for **calculating the approximate age based on the year of birth**, **calculating the exact age based on the birth date** and **cheering on birthday and birth date**.
+This project exposes a Javascript class called `AgeDiscoverer`, which has methods for **calculating the approximate age based on the year of birth**, **calculating the exact age based on the birth date** and **cheering on birthday and birth date**.
 
 ## Pre-requirements
 
