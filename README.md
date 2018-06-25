@@ -66,7 +66,8 @@ ok 11 should be equal
 ok 12 should be equal
 # returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth ahead of current day
 ok 13 should be equal
-# returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth previously from the current day
+# returns the exact age based on date of birth - year of birth past from current year,
+    month of birth equals to the current month and day of birth previously from the current day
 ok 14 should be equal
 # returns the exact age based on date of birth - birthday
 ok 15 should be equal
@@ -76,37 +77,35 @@ ok 16 should be equal
 ok 17 should be equal
 # returns zero when not providing a date of birth
 ok 18 should be equal
-# returns zero when providing an invalid date of birth (e.g. `const birthDate = new Date('foobarbaz')`)
-ok 19 should be equal
 # greets on birthday
-ok 20 should be equal
+ok 19 should be equal
 # greets on birth date
-ok 21 should be equal
+ok 20 should be equal
 # returns undefined when providing birth date X years in the future
-ok 22 should be equal
+ok 21 should be equal
 # returns undefined when providing birth date X days in the future
-ok 23 should be equal
+ok 22 should be equal
 # returns undefined when providing birth date X months in the future
-ok 24 should be equal
+ok 23 should be equal
 # returns undefined when not providing birth date
-ok 25 should be equal
+ok 24 should be equal
 # returns undefined when providing invalid birth date (e.g. `const birthDate = new Date('foobar')`)
-ok 26 should be equal
+ok 25 should be equal
 =============================================================================
 Writing coverage object [/Users/Walmyr/www/ageDiscoverer/coverage/coverage.json]
 Writing coverage reports at [/Users/Walmyr/www/ageDiscoverer/coverage]
 =============================================================================
 
 =============================== Coverage summary ===============================
-Statements   : 100% ( 43/43 )
-Branches     : 100% ( 32/32 )
+Statements   : 100% ( 42/42 )
+Branches     : 100% ( 30/30 )
 Functions    : 100% ( 6/6 )
 Lines        : 100% ( 31/31 )
 ================================================================================
 
-1..26
-# tests 26
-# pass  26
+1..25
+# tests 25
+# pass  25
 
 # ok
 ```
