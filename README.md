@@ -21,7 +21,7 @@ Run `npm install` to install the dev dependencies
 
 Run `npm run lint` to check for code style issues.
 
-**Note:** in case of lint issues that can be automatically fixed, run `npm run lint:fix` to get them automatically fixed.
+**Note:** in case of lint issues that can be automatically fixed, run `npm run lint:fix`.
 
 ## Tests
 
@@ -111,7 +111,7 @@ Lines        : 100% ( 31/31 )
 # ok
 ```
 
-**Note:** after pushes to the master branch, lint and tests are automatically executed and the build status can be seen below.
+**Note:** after pushes to any branch on GitHub, lint and tests are automatically executed on [SemaphoreCI](https://semaphoreci.com/wlsf82/age-discoverer) and the build status can be seen below.
 
 [![Build Status](https://semaphoreci.com/api/v1/wlsf82/age-discoverer/branches/master/badge.svg)](https://semaphoreci.com/wlsf82/age-discoverer)
 
@@ -121,11 +121,11 @@ If tests are executed in any day of January (e.g., 2018-01-16), in the last day 
 
 ## Code quality
 
-Below you can see the status of this project on Sonar Cloud.
+Below you can see the status of this project on [Sonar Cloud](https://sonarcloud.io).
 
 ![Project Status](https://sonarcloud.io/api/project_badges/measure?project=age-discoverer&metric=alert_status)
 
-> SonarCloud evaluates code in terms of bugs, vulnerabilities, code smells, test coverage, and duplications.
+> Sonar Cloud evaluates code in terms of bugs, vulnerabilities, code smells, test coverage, and duplications.
 
 The complete dashboard can be seen [here](https://sonarcloud.io/dashboard?id=age-discoverer).
 ___
