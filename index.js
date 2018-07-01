@@ -45,8 +45,8 @@ class AgeDiscoverer {
         if (yearOfBirth > currentYear) return undefined;
         else if (monthOfBirth > currentMonth || monthOfBirth < currentMonth) return undefined;
         else if (dayOfBirth > currentDayOfTheMonth || dayOfBirth < currentDayOfTheMonth) return undefined;
-        else if (yearOfBirth === currentYear) return "Welcome to earth! 💚 ";
-        else return `Happy birthday! Today you are completing ${currentYear - yearOfBirth} years old. 💚 `;
+        else if (yearOfBirth === currentYear) return "Welcome to earth!";
+        else return `Happy birthday! Today you are completing ${currentYear - yearOfBirth} years old.`;
     }
 }
 
