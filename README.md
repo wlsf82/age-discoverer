@@ -60,11 +60,14 @@ ok 8 should be equal
 ok 9 should be equal
 # returns zero when providing a date of birth X day(s) in the future
 ok 10 should be equal
-# returns the exact age based on date of birth - year of birth past from current year and month of birth ahead of current month
+# returns the exact age based on date of birth - year of birth past from current year
+    and month of birth ahead of current month
 ok 11 should be equal
-# returns the exact age based on date of birth - year of birth past from current year and month of birth previously from the current month
+# returns the exact age based on date of birth - year of birth past from current year
+    and month of birth previously from the current month
 ok 12 should be equal
-# returns the exact age based on date of birth - year of birth past from current year, month of birth equals to the current month and day of birth ahead of current day
+# returns the exact age based on date of birth - year of birth past from current year,
+    month of birth equals to the current month and day of birth ahead of current day
 ok 13 should be equal
 # returns the exact age based on date of birth - year of birth past from current year,
     month of birth equals to the current month and day of birth previously from the current day
