@@ -9,7 +9,7 @@ blocks:
   - name: "Install Node.js and NPM"
     task:
       jobs:
-        - name: Nodejs
+        - name: Node.js
           commands:
             - cd ~
             - curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
