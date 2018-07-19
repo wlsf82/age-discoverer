@@ -16,8 +16,6 @@ blocks:
             - sudo bash nodesource_setup.sh
             - sudo apt-get install nodejs
             - sudo apt-get install build-essential
-            - node -v
-            - npm -v
   - name: "Build"
     task:
       jobs:
