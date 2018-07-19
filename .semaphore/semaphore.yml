@@ -19,7 +19,7 @@ blocks:
   - name: "Lint"
     task:
       jobs:
-      - name: Lint
+      - name: ESLint
         commands:
           - checkout
           - npm i
