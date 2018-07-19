@@ -25,7 +25,13 @@ blocks:
         commands:
           - checkout
           - npm install
-
+  - name: "Lint"
+    task:
+      jobs:
+      - name: Lint
+        commands:
+          - checkout
+          - npm run lint
   - name: "Test"
     task:
       jobs:
