@@ -23,6 +23,7 @@ blocks:
       jobs:
       - name: Install
         commands:
+          - checkout
           - npm install
 
   - name: "Test"
@@ -30,4 +31,5 @@ blocks:
       jobs:
       - name: Unit test
         commands:
+          - checkout
           - npm t
