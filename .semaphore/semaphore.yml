@@ -24,13 +24,14 @@ blocks:
       - name: Install
         commands:
           - checkout
-          - npm install
+          - npm i
   - name: "Lint"
     task:
       jobs:
       - name: Lint
         commands:
           - checkout
+          - npm i
           - npm run lint
   - name: "Test"
     task:
@@ -38,4 +39,5 @@ blocks:
       - name: Unit test
         commands:
           - checkout
+          - npm i
           - npm t
